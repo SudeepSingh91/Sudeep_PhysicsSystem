@@ -20,10 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controllers\IGameObjectController.h" />
+    <ClInclude Include="Controllers\PlayerController.h" />
     <ClInclude Include="GameObject\GameObject-inl.h" />
     <ClInclude Include="GameObject\GameObject.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Controllers\PlayerController.cpp" />
     <ClCompile Include="GameObject\GameObject.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

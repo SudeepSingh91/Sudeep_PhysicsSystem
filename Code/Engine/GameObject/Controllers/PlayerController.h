@@ -1,7 +1,7 @@
 #ifndef PLAYERCONTROLLER_H
 #define PLAYERCONTROLLER_H
 
-#include "GameObject/Controllers/IGameObjectController.h"
+#include "IGameObjectController.h"
 
 namespace Engine
 {

@@ -19,12 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Code\Game\Gameplay\Controllers\AIController.h" />
-    <ClInclude Include="Code\Game\Gameplay\Controllers\PlayerController.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Code\Game\Gameplay\Controllers\AIController.cpp" />
-    <ClCompile Include="Code\Game\Gameplay\Controllers\PlayerController.cpp" />
     <ClCompile Include="Code\Game\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -1,7 +1,7 @@
 #include "PlayerController.h"
-#include "GameObject/GameObject/GameObject.h"
+#include "../GameObject/GameObject.h"
 
-#include "Math/Vector2/Vector2.h"
+#include "../../Math/Vector2/Vector2.h"
 
 namespace Engine
 {
