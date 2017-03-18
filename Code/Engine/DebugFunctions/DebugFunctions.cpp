@@ -4,12 +4,12 @@
 
 namespace Debugging
 {
-	void OutputDebuggingInfo(const char * i_fmt, const char* i_file, const int i_line_number, ...)
+	void OutputDebuggingInfo(const char * i_fmt, const char* i_file, const int i_lineNumber, ...)
 	{
 		const size_t len_temp = 256;
 		char str_temp[len_temp] = { 0 };
 
-		sprintf_s(str_temp, "DEBUG %s %i: ", i_file, i_line_number);
+		sprintf_s(str_temp, "DEBUG %s %i: ", i_file, i_lineNumber);
 		strcat_s(str_temp, i_fmt);
 		strcat_s(str_temp, "\n");
 
@@ -17,7 +17,7 @@ namespace Debugging
 		char str_output[len_output] = { 0 };
 
 		va_list args;
-		va_start(args, i_line_number);
+		va_start(args, i_lineNumber);
 		vsprintf_s(str_output, len_output, str_temp, args);
 		va_end(args);
 
