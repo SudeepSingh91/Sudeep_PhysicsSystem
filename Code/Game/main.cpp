@@ -1,3 +1,7 @@
+#if _DEBUG
+#include <crtdbg.h>
+#endif
+
 #include <Windows.h>
 
 #include "Timing/Timing.h"
@@ -5,6 +9,11 @@
 
 int WINAPI WinMain(const HINSTANCE i_hInstance, const HINSTANCE i_hprevInstance, const PSTR i_cmdLine, const int i_showCmd)
 {
+#ifdef _DEBUG
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	//_CrtSetBreakAlloc(80);
+#endif
+	
 	const int topx = 150;
 	const int topy = 20;
 	const int windowWidth = 1200;
@@ -33,5 +42,6 @@ int WINAPI WinMain(const HINSTANCE i_hInstance, const HINSTANCE i_hprevInstance,
 		}
 	}
 
+	timer->StopTimer();
 	return (int)msg.wParam;
 }
