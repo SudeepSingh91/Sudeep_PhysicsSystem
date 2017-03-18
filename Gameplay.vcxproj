@@ -19,7 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\Game\Gameplay.cpp" />
     <ClCompile Include="Code\Game\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Game\Gameplay-inl.h" />
+    <ClInclude Include="Code\Game\Gameplay.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Images\Background.bmp" />
+    <Image Include="Assets\Images\Background_mask.bmp" />
+    <Image Include="Assets\Images\Jet.bmp" />
+    <Image Include="Assets\Images\Jet_mask.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Gameplay.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A657C5BE-429A-4EBA-82A2-059C69F93B24}</ProjectGuid>

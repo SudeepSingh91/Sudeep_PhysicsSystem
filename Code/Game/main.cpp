@@ -1,3 +1,5 @@
+#include "Gameplay.h"
+
 #if _DEBUG
 #include <crtdbg.h>
 #endif
@@ -20,6 +22,10 @@ int WINAPI WinMain(const HINSTANCE i_hInstance, const HINSTANCE i_hprevInstance,
 	const int windowHeight = 800;
 	Engine::Windows::WindowData myWindow(i_hInstance, topx, topy, windowWidth, windowHeight);
 
+	Game::Gameplay::Gameplay* gameplay = Game::Gameplay::Gameplay::GetGame();
+	gameplay->InitializeSprite(myWindow.AppInstance());
+	gameplay->InitializeBackBuffer(myWindow.WindowHandle(), windowWidth, windowHeight);
+
 	ShowWindow(myWindow.WindowHandle() , i_showCmd);
 	UpdateWindow(myWindow.WindowHandle());
 	
@@ -38,10 +44,14 @@ int WINAPI WinMain(const HINSTANCE i_hInstance, const HINSTANCE i_hprevInstance,
 		}
 		else
 		{
-			//game loop
+			timer->OnNewFrame();
+			const float dt = timer->GetElapsedSecondCount_duringPreviousFrame();
+			gameplay->UpdateGameObjects(dt);
+			gameplay->DrawSprites();
 		}
 	}
 
 	timer->StopTimer();
+	gameplay->DestroyGame();
 	return (int)msg.wParam;
 }
