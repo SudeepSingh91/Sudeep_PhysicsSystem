@@ -13,7 +13,7 @@ namespace Game
 	{
 		Gameplay* Gameplay::m_gameplay = nullptr;
 
-		Gameplay::Gameplay() : m_player(nullptr), m_background(nullptr), m_playerController(nullptr), m_backbuffer(nullptr)
+		Gameplay::Gameplay() : m_player(nullptr), m_background(nullptr), m_playerController(nullptr), m_backbuffer(nullptr), m_spritedc(nullptr)
 		{
 			
 		}
